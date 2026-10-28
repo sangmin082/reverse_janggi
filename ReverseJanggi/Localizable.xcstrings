@@ -1,0 +1,1446 @@
+{
+  "sourceLanguage": "ko",
+  "strings": {
+    "%@의 승리": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ Wins"
+          }
+        }
+      }
+    },
+    "3회 동형": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Threefold Repetition"
+          }
+        }
+      }
+    },
+    "50수 규칙": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fifty-Move Rule"
+          }
+        }
+      }
+    },
+    "가로·세로로 원하는 만큼. 궁성 안에서는 대각선도.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Any distance along a line. Inside a palace, along the diagonals too."
+          }
+        }
+      }
+    },
+    "가운데 병을 움직여 보세요.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move the soldier in the middle."
+          }
+        }
+      }
+    },
+    "강제 캡처 — 잡을 수 있으면 잡아야 합니다": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Forced capture — if you can take, you must"
+          }
+        }
+      }
+    },
+    "같은 국면이 세 번 반복되어 무승부입니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Draw by threefold repetition."
+          }
+        }
+      }
+    },
+    "궁": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "General"
+          }
+        }
+      }
+    },
+    "궁과 같습니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Moves exactly like the general."
+          }
+        }
+      }
+    },
+    "궁끼리 마주 보면 안 돼요": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Generals Can't Face Each Other"
+          }
+        }
+      }
+    },
+    "궁만 남기고 모든 기물을 버려서 승리했습니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Won by giving away every piece except the general."
+          }
+        }
+      }
+    },
+    "궁만 남기고 모든 기물을 잃으면 승리합니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lose every piece except your general and you win."
+          }
+        }
+      }
+    },
+    "궁만 남기면 승리": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Only your general left — you win"
+          }
+        }
+      }
+    },
+    "궁만 남음": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Only General Left"
+          }
+        }
+      }
+    },
+    "궁성 안에서 선을 따라 한 칸. 궁성 밖으로 나갈 수 없습니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "One step along the lines inside the palace. It can never leave the palace."
+          }
+        }
+      }
+    },
+    "규칙 한 장": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The Rules"
+          }
+        }
+      }
+    },
+    "규칙 한 장 보기": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "View the rules"
+          }
+        }
+      }
+    },
+    "그 수가 아닙니다. 다시 해보세요.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not that move. Try again."
+          }
+        }
+      }
+    },
+    "기물 이동": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "How Pieces Move"
+          }
+        }
+      }
+    },
+    "기물을 탭하면 갈 수 있는 자리가 표시돼요.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap a piece to see where it can go."
+          }
+        }
+      }
+    },
+    "나 · %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Me · %@"
+          }
+        }
+      }
+    },
+    "남은 기물 %lld · %lld점": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld pieces · %lld pts"
+          }
+        }
+      }
+    },
+    "다음 레슨": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Next Lesson"
+          }
+        }
+      }
+    },
+    "대국을 시작합니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Starting the game."
+          }
+        }
+      }
+    },
+    "대국이 시작되지 않았습니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The game hasn't started."
+          }
+        }
+      }
+    },
+    "두 궁이 같은 줄에서 사이에 아무것도 없이 마주 보는 것을 빅장이라고 해요. 리버스 장기에서는 빅장을 만드는 수를 둘 수 없어요. 한수쉼(패스)도 없습니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "When the two generals face each other on the same file with nothing in between, it's called bikjang. In Reverse Janggi you may never make a move that creates it. There's no passing, either."
+          }
+        }
+      }
+    },
+    "두 궁이 사이에 아무것도 없이 마주 보게 만드는 수(빅장)는 둘 수 없습니다. 한수쉼도 없습니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You may not leave the two generals facing each other with nothing in between (bikjang). There's no passing."
+          }
+        }
+      }
+    },
+    "둘 수 있는 수가 없어 무승부입니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No legal moves — it's a draw."
+          }
+        }
+      }
+    },
+    "둘 수가 없을 때와 같은 국면이 세 번 반복될 때는 무승부입니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No legal moves, or the same position three times, is a draw."
+          }
+        }
+      }
+    },
+    "레슨 %lld / %lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lesson %lld / %lld"
+          }
+        }
+      }
+    },
+    "리버스 장기": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reverse Janggi"
+          }
+        }
+      }
+    },
+    "리버스 장기란?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What Is Reverse Janggi?"
+          }
+        }
+      }
+    },
+    "리버스 장기에서 한 판 하자! 방코드: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Play Reverse Janggi with me! Room code: %@"
+          }
+        }
+      }
+    },
+    "리버스 장기의 모든 규칙을 배웠습니다. 이제 실전에서 마음껏 져보세요 — 그게 이기는 길입니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You've learned every rule of Reverse Janggi. Now go lose to your heart's content — that's how you win."
+          }
+        }
+      }
+    },
+    "리버스 장기의 목표는 정반대예요. 기물을 지키는 게 아니라, 궁만 남기고 전부 잃어야 이깁니다. 그리고 첫 수는 초가 아니라 한의 몫이에요.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The goal is completely reversed. You don't protect your pieces — you win by losing all of them except your general. And the first move belongs to Han, not Cho."
+          }
+        }
+      }
+    },
+    "마": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Horse"
+          }
+        }
+      }
+    },
+    "마지막 수 무르기": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Take back the last move"
+          }
+        }
+      }
+    },
+    "매칭 완료": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Matched"
+          }
+        }
+      }
+    },
+    "멀리 있는 졸을 차로 잡지 말고, 다른 수를 두세요.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Don't take the distant soldier with your chariot — play any other move."
+          }
+        }
+      }
+    },
+    "모든 것이 거꾸로인 장기입니다. 기물은 지키는 게 아니라 버리는 것이고, 외통수는 당하는 쪽이 이깁니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "It's Janggi with everything reversed. Pieces are for giving away, not protecting — and getting checkmated means you win."
+          }
+        }
+      }
+    },
+    "무르기": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Undo"
+          }
+        }
+      }
+    },
+    "무승부": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Draw"
+          }
+        }
+      }
+    },
+    "미션 시작": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start Mission"
+          }
+        }
+      }
+    },
+    "반드시 기물 하나를 넘어서 움직이고 잡습니다. 포는 넘을 수도, 잡을 수도 없습니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Must jump exactly one piece to move or capture. It can't jump over or capture another cannon."
+          }
+        }
+      }
+    },
+    "방 만들기": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Create Room"
+          }
+        }
+      }
+    },
+    "방을 만들어 코드를 공유하거나, 받은 코드로 입장하세요. 선공(한)은 무작위로 정해집니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Create a room and share the code, or join with one you received. Han (who moves first) is assigned at random."
+          }
+        }
+      }
+    },
+    "방이 가득 찼습니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The room is full."
+          }
+        }
+      }
+    },
+    "방이 열렸습니다": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Room Open"
+          }
+        }
+      }
+    },
+    "방코드로 입장": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Join with a Code"
+          }
+        }
+      }
+    },
+    "방코드로 친구와 대결": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Challenge a friend with a room code"
+          }
+        }
+      }
+    },
+    "배우기": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Learn"
+          }
+        }
+      }
+    },
+    "버리는 자가 이긴다": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Whoever Gives Away Wins"
+          }
+        }
+      }
+    },
+    "병을 초의 졸이 잡을 수밖에 없는 곳에 놓으세요.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Put your soldier where Cho's soldier has no choice but to take it."
+          }
+        }
+      }
+    },
+    "병이 옆으로 비키면 두 궁이 마주 봐요. 앞으로는 갈 수 있어요.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "If the soldier steps aside, the generals face each other. It can still go forward."
+          }
+        }
+      }
+    },
+    "보통": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Normal"
+          }
+        }
+      }
+    },
+    "사": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guard"
+          }
+        }
+      }
+    },
+    "상": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elephant"
+          }
+        }
+      }
+    },
+    "상대 · %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opponent · %@"
+          }
+        }
+      }
+    },
+    "상대가 나가서 방이 닫혔습니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your opponent left, so the room was closed."
+          }
+        }
+      }
+    },
+    "상대가 나갔습니다": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opponent Left"
+          }
+        }
+      }
+    },
+    "상대를 기다리는 중…": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting for your opponent…"
+          }
+        }
+      }
+    },
+    "생각 중…": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thinking…"
+          }
+        }
+      }
+    },
+    "서버가 잠들어 있으면 깨우는 데 최대 1분 정도 걸릴 수 있어요.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "If the server is asleep, it can take up to a minute to wake up."
+          }
+        }
+      }
+    },
+    "서버에 연결할 수 없습니다. 잠시 후 다시 시도해 주세요.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Can't reach the server. Please try again in a moment."
+          }
+        }
+      }
+    },
+    "서버와 연결이 끊어졌습니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lost connection to the server."
+          }
+        }
+      }
+    },
+    "수 없음": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Moves"
+          }
+        }
+      }
+    },
+    "수료": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Complete"
+          }
+        }
+      }
+    },
+    "쉬움": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Easy"
+          }
+        }
+      }
+    },
+    "승리": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Victory"
+          }
+        }
+      }
+    },
+    "시작": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start"
+          }
+        }
+      }
+    },
+    "아무 기물이나 움직여 첫 수를 두세요.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move any piece to make the first move."
+          }
+        }
+      }
+    },
+    "알 수 없는 오류": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unknown error"
+          }
+        }
+      }
+    },
+    "앞이나 옆으로 한 칸. 상대 궁성 안에서는 대각선 앞으로도.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "One step forward or sideways. Inside the enemy palace, diagonally forward too."
+          }
+        }
+      }
+    },
+    "어려움": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hard"
+          }
+        }
+      }
+    },
+    "연결 중…": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connecting…"
+          }
+        }
+      }
+    },
+    "연결이 끊어져 대국을 계속할 수 없습니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The connection was lost, so the game can't continue."
+          }
+        }
+      }
+    },
+    "예외가 하나 있어요. 가장 강한 기물인 차의 캡처는 2칸 이내일 때만 강제입니다. 멀리 있는 기물은 차로 잡을 수 있어도, 잡지 않아도 돼요.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "There's one exception. Captures by the chariot, the strongest piece, are forced only within 2 points. A distant piece may be taken by the chariot, but it doesn't have to be."
+          }
+        }
+      }
+    },
+    "온라인 대전": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Online Match"
+          }
+        }
+      }
+    },
+    "완료": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Done"
+          }
+        }
+      }
+    },
+    "외딴 섬": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lone Island"
+          }
+        }
+      }
+    },
+    "외딴 섬 — 궁 말고는 움직일 기물이 없어서 승리했습니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lone island — won because nothing but the general could move."
+          }
+        }
+      }
+    },
+    "외통": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Checkmate"
+          }
+        }
+      }
+    },
+    "외통수를 당하면 이기는 게임 — 그렇게 끝났습니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In this game getting checkmated wins — and that's how it ended."
+          }
+        }
+      }
+    },
+    "외통수를 당한 쪽이 이깁니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Whoever gets checkmated wins."
+          }
+        }
+      }
+    },
+    "외통수를 당해도 승리": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Getting checkmated also wins"
+          }
+        }
+      }
+    },
+    "이미 방에 있습니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You're already in a room."
+          }
+        }
+      }
+    },
+    "이제 실전 감각이에요. 상대는 잡을 수 있으면 잡아야만 하죠. 그러니 내 기물을 일부러 상대가 잡을 수 있는 곳에 놓으면, 상대는 어쩔 수 없이 잡아줍니다. 마지막 기물을 버려서 직접 승리해보세요!": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Time for real tactics. Your opponent must capture whenever they can. So if you deliberately put a piece where they can take it, they have no choice. Give away your last piece and win!"
+          }
+        }
+      }
+    },
+    "일곱 개의 미션으로 규칙 익히기": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Learn the rules in seven missions"
+          }
+        }
+      }
+    },
+    "일곱 개의 미션으로 차근차근 배워봅시다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Let's learn step by step with seven missions."
+          }
+        }
+      }
+    },
+    "입장": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Join"
+          }
+        }
+      }
+    },
+    "잘못된 메시지 형식입니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Invalid message format."
+          }
+        }
+      }
+    },
+    "잡을 수 있는 기물이 있다면 반드시 그중 하나를 잡아야 해요. 기물을 잃는 게 목표인 게임이라, 이 규칙이 승부의 핵심이 됩니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "If you can capture something, you must capture one of them. Since the goal is to lose pieces, this rule is the heart of the game."
+          }
+        }
+      }
+    },
+    "잡을 수 있는 수가 있으면 반드시 잡아야 합니다. 단, 차의 캡처는 2칸 이내일 때만 강제입니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "If you can capture, you must. Chariot captures are forced only within 2 points."
+          }
+        }
+      }
+    },
+    "잡을 수 있으면 잡아야 해요": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "If You Can Take, You Must"
+          }
+        }
+      }
+    },
+    "장군 — 반드시 피해야 합니다": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check — you must escape"
+          }
+        }
+      }
+    },
+    "장군 규칙은 그대로 — 장군 피하기가 강제 캡처보다 우선합니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check works as usual — escaping check comes before forced capture."
+          }
+        }
+      }
+    },
+    "장군 규칙은 일반 장기 그대로예요. 장군을 받으면 반드시 피해야 하고, 강제 캡처보다 장군 피하기가 우선입니다. 스스로 장군을 받는 자리로 갈 수도 없어요.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check works just like regular Janggi. When in check you must escape, and escaping comes before forced capture. You also can't move into check."
+          }
+        }
+      }
+    },
+    "장군에서 벗어나세요.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Get out of check."
+          }
+        }
+      }
+    },
+    "장군이 먼저예요": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check Comes First"
+          }
+        }
+      }
+    },
+    "장군이 아닌데 궁밖에 못 움직여도 승리 — 외딴 섬": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not in check but only your general can move — lone island, you win"
+          }
+        }
+      }
+    },
+    "장군이 아닌데 궁밖에 움직일 수 없다면, 그것도 승리입니다. (외딴 섬)": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "If you're not in check and only your general can move, that's also a win. (Lone island)"
+          }
+        }
+      }
+    },
+    "전송 실패: %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Send failed: %@"
+          }
+        }
+      }
+    },
+    "점수 판정": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scoring"
+          }
+        }
+      }
+    },
+    "점수: 차 13 · 포 7 · 마 5 · 상 3 · 사 3 · 졸 2": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Points: chariot 13 · cannon 7 · horse 5 · elephant 3 · guard 3 · soldier 2"
+          }
+        }
+      }
+    },
+    "정답입니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Correct."
+          }
+        }
+      }
+    },
+    "존재하지 않는 방 코드입니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "That room code doesn't exist."
+          }
+        }
+      }
+    },
+    "졸": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Soldier"
+          }
+        }
+      }
+    },
+    "졸과 차 사이의 거리를 세어보세요. 병이나 궁을 움직여도 돼요.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Count the distance between the chariot and the soldier. You can move your soldier or general instead."
+          }
+        }
+      }
+    },
+    "졸은 앞이나 옆으로 잡아요. 졸 바로 앞에 병을 놓아보세요.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Soldiers capture forward or sideways. Put your soldier right in front of theirs."
+          }
+        }
+      }
+    },
+    "지금 둘 수 있는 수는 단 하나뿐이에요. 찾아보세요.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "There's only one legal move right now. Find it."
+          }
+        }
+      }
+    },
+    "지는 법을 아는 사람이 이깁니다": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Whoever knows how to lose, wins"
+          }
+        }
+      }
+    },
+    "차": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chariot"
+          }
+        }
+      }
+    },
+    "차는 2칸까지만 강제예요": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chariots Are Forced Only Within 2"
+          }
+        }
+      }
+    },
+    "차는 움직일 수 없어요. 병으로 잡을 수 있는 것을 찾아보세요.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The chariot can't move. Look for something your soldier can capture."
+          }
+        }
+      }
+    },
+    "차의 길에서 궁을 비키세요.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move your general out of the chariot's path."
+          }
+        }
+      }
+    },
+    "초": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cho"
+          }
+        }
+      }
+    },
+    "취소": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
+          }
+        }
+      }
+    },
+    "친구에게 이 코드를 보내주세요. 입장하는 즉시 대국이 시작됩니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Send this code to a friend. The game starts as soon as they join."
+          }
+        }
+      }
+    },
+    "친구와 한 판": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Play a Friend"
+          }
+        }
+      }
+    },
+    "캡처 없이 %lld수 — 50수가 되면 점수 판정": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld moves without a capture — scored at 50"
+          }
+        }
+      }
+    },
+    "캡처 없이 50수가 지나 점수 판정 — 남은 점수가 더 낮은 쪽이 이겼습니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fifty moves without a capture — on points, the side with fewer points left wins."
+          }
+        }
+      }
+    },
+    "캡처 없이 50수가 지나면 점수 판정 — 남은 기물 점수가 낮은 쪽이 이깁니다. 같으면 무승부.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "After fifty moves without a capture, the side with fewer points of material left wins. Equal points is a draw."
+          }
+        }
+      }
+    },
+    "캡처 없이 50수가 지났고 점수가 같아 무승부입니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fifty moves without a capture and equal points — it's a draw."
+          }
+        }
+      }
+    },
+    "컴퓨터 · %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Computer · %@"
+          }
+        }
+      }
+    },
+    "컴퓨터 대전": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "vs Computer"
+          }
+        }
+      }
+    },
+    "컴퓨터 대전 · %@": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "vs Computer · %@"
+          }
+        }
+      }
+    },
+    "코드 공유하기": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share Code"
+          }
+        }
+      }
+    },
+    "패배": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Defeat"
+          }
+        }
+      }
+    },
+    "포": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cannon"
+          }
+        }
+      }
+    },
+    "포 앞의 병이 디딤돌이에요. 병을 넘어 쭉 내려가 보세요.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The soldier in front of the cannon is its stepping stone. Jump it and slide all the way down."
+          }
+        }
+      }
+    },
+    "포는 넘어서 다녀요": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cannons Jump"
+          }
+        }
+      }
+    },
+    "포는 반드시 기물 하나를 뛰어넘어서 움직이고 잡아요. 다만 포끼리는 넘을 수도, 잡을 수도 없어요. 강제 캡처는 포에게도 똑같이 적용됩니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A cannon always jumps exactly one piece to move or capture. But it can't jump over or capture another cannon. Forced capture applies to cannons too."
+          }
+        }
+      }
+    },
+    "포로 초의 마를 잡으세요.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Capture Cho's horse with your cannon."
+          }
+        }
+      }
+    },
+    "한": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Han"
+          }
+        }
+      }
+    },
+    "한 기기로 번갈아 두기": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Take turns on one device"
+          }
+        }
+      }
+    },
+    "한 칸 직진 후 두 칸 대각선. 지나는 칸이 막히면 못 갑니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "One step straight, then two diagonally. Blocked if any point along the way is occupied."
+          }
+        }
+      }
+    },
+    "한 칸 직진 후 한 칸 대각선. 첫 칸이 막히면 못 갑니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "One step straight, then one diagonally. Blocked if the first point is occupied."
+          }
+        }
+      }
+    },
+    "한 판 더": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Play Again"
+          }
+        }
+      }
+    },
+    "한(漢)이 먼저 둡니다. 배치는 양쪽 모두 마상상마입니다.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Han (漢) moves first. Both sides set up horse–elephant–elephant–horse."
+          }
+        }
+      }
+    },
+    "한이 먼저 시작해요": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Han Goes First"
+          }
+        }
+      }
+    },
+    "함께 하기": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pass & Play"
+          }
+        }
+      }
+    },
+    "혼자서 한 판": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A game on your own"
+          }
+        }
+      }
+    },
+    "홈으로": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Home"
+          }
+        }
+      }
+    },
+    "힌트": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hint"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
