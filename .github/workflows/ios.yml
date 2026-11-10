@@ -10,7 +10,7 @@ jobs:
   # 규칙 엔진 단위 테스트 (Swift Package — 앱과 같은 소스)
   engine-tests:
     name: Engine tests
-    runs-on: macos-15
+    runs-on: macos-26
     steps:
       - uses: actions/checkout@v4
       - name: swift test
@@ -20,7 +20,7 @@ jobs:
   # TestFlight 업로드는 .github/workflows/testflight.yml (fastlane) 사용
   build:
     name: Build (unsigned)
-    runs-on: macos-15
+    runs-on: macos-26
     steps:
       - uses: actions/checkout@v4
 
