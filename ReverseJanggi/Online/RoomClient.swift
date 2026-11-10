@@ -1,0 +1,160 @@
+import Foundation
+
+/// 2인용 온라인 대전 클라이언트.
+/// `server/` 디렉터리의 릴레이 서버와 WebSocket(JSON)으로 통신한다.
+/// 방을 만들면 6자리 방코드를 받고, 상대가 코드로 입장하면 대국이 시작된다.
+/// 엔진이 결정적이므로 서버는 무브를 해석하지 않는 단순 릴레이면 충분하다.
+@MainActor
+final class RoomClient: ObservableObject {
+    enum ConnectionState: Equatable {
+        case idle
+        case connecting
+        /// 방 생성 완료 — 상대 입장 대기 중
+        case waitingForOpponent(code: String)
+        /// 매칭 완료 — 내가 둘 진영 (선공 = 한, 서버가 랜덤 배정)
+        case matched(me: Side)
+        case opponentLeft
+        case failed(String)
+    }
+
+    @Published private(set) var state: ConnectionState = .idle
+    /// 상대의 무브가 도착하면 호출된다
+    var onRemoteMove: ((Move) -> Void)?
+    /// 상대가 방을 나가거나 연결이 끊기면 호출된다
+    var onOpponentLeft: (() -> Void)?
+
+    private var task: URLSessionWebSocketTask?
+    private var myIndex: Int?
+
+    // MARK: 서버 프로토콜 메시지
+
+    private struct ServerMessage: Decodable {
+        let type: String
+        let code: String?
+        let player: Int?
+        let first: Int?
+        let move: Move?
+        let message: String?
+        let reason: String?
+    }
+
+    private struct ClientMessage: Encodable {
+        let type: String
+        var code: String? = nil
+        var move: Move? = nil
+    }
+
+    // MARK: 연결
+
+    func createRoom(serverURL: URL) {
+        connect(serverURL: serverURL) { [weak self] in
+            await self?.send(ClientMessage(type: "create"))
+        }
+    }
+
+    func joinRoom(code: String, serverURL: URL) {
+        let normalized = code.uppercased().trimmingCharacters(in: .whitespacesAndNewlines)
+        connect(serverURL: serverURL) { [weak self] in
+            await self?.send(ClientMessage(type: "join", code: normalized))
+        }
+    }
+
+    private func connect(serverURL: URL, then onOpen: @escaping () async -> Void) {
+        close()
+        state = .connecting
+        let task = URLSession.shared.webSocketTask(with: serverURL)
+        self.task = task
+        task.resume()
+        Task {
+            await onOpen()
+            await receiveLoop(task)
+        }
+    }
+
+    func send(move: Move) {
+        Task { await send(ClientMessage(type: "move", move: move)) }
+    }
+
+    func close() {
+        task?.cancel(with: .goingAway, reason: nil)
+        task = nil
+        myIndex = nil
+        state = .idle
+    }
+
+    // MARK: 수신 루프
+
+    private func receiveLoop(_ task: URLSessionWebSocketTask) async {
+        while self.task === task {
+            do {
+                let message = try await task.receive()
+                let data: Data
+                switch message {
+                case .string(let text): data = Data(text.utf8)
+                case .data(let d): data = d
+                @unknown default: continue
+                }
+                handle(try JSONDecoder().decode(ServerMessage.self, from: data))
+            } catch {
+                if self.task === task {
+                    if case .matched = state {
+                        state = .opponentLeft
+                        onOpponentLeft?()
+                    } else if case .waitingForOpponent = state {
+                        state = .failed(String(localized: "서버와 연결이 끊어졌습니다."))
+                    } else if case .connecting = state {
+                        state = .failed(String(localized: "서버에 연결할 수 없습니다. 잠시 후 다시 시도해 주세요."))
+                    }
+                    self.task = nil
+                }
+                return
+            }
+        }
+    }
+
+    private func handle(_ msg: ServerMessage) {
+        switch msg.type {
+        case "room":
+            myIndex = msg.player
+            if let code = msg.code { state = .waitingForOpponent(code: code) }
+        case "joined":
+            myIndex = msg.player
+        case "start":
+            // first = 선 플레이어의 인덱스. 리버스 장기는 한이 선공이므로 선 = 한.
+            guard let myIndex, let first = msg.first else { return }
+            let me: Side = (myIndex == first) ? .han : .cho
+            state = .matched(me: me)
+        case "move":
+            if let move = msg.move { onRemoteMove?(move) }
+        case "left":
+            state = .opponentLeft
+            onOpponentLeft?()
+        case "error":
+            state = .failed(Self.localizedServerError(reason: msg.reason, fallback: msg.message))
+        default:
+            break
+        }
+    }
+
+    /// 서버 오류를 reason 코드 기준으로 현지화 (구버전 서버는 message 폴백)
+    private static func localizedServerError(reason: String?, fallback: String?) -> String {
+        switch reason {
+        case "room_not_found": return String(localized: "존재하지 않는 방 코드입니다.")
+        case "room_full": return String(localized: "방이 가득 찼습니다.")
+        case "already_in_room": return String(localized: "이미 방에 있습니다.")
+        case "not_started": return String(localized: "대국이 시작되지 않았습니다.")
+        case "bad_format": return String(localized: "잘못된 메시지 형식입니다.")
+        default: return fallback ?? String(localized: "알 수 없는 오류")
+        }
+    }
+
+    private func send(_ message: ClientMessage) async {
+        guard let task else { return }
+        do {
+            let data = try JSONEncoder().encode(message)
+            try await task.send(.string(String(decoding: data, as: UTF8.self)))
+        } catch {
+            state = .failed(String(localized: "전송 실패: \(error.localizedDescription)"))
+        }
+    }
+}
