@@ -33,3 +33,28 @@
 4. TestFlight 앱에서 설치합니다.
 
 빌드 번호는 TestFlight에 있는 가장 큰 번호 + 1로 자동으로 정해집니다.
+
+## 시크릿을 한 번에 등록하기 (`scripts/ios-secrets.sh`)
+
+값을 서버(예: 오라클 클라우드)에 한 번 저장해 두고, 새 앱마다 한 줄로 등록합니다. 값은 서버의 `~/.ios-release/`(권한 600)에만 있고 저장소에는 올라가지 않습니다.
+
+처음 한 번 (서버에서):
+
+```bash
+# 1) gh 설치 — Ubuntu: sudo apt install -y gh / Oracle Linux: https://github.com/cli/cli/blob/trunk/docs/install_linux.md
+# 2) 로그인 — 토큰 방식 권장. Fine-grained 토큰: Repository access "All repositories",
+#    권한 Secrets: Read and write, Actions: Read and write (--run 용), Metadata: Read
+gh auth login
+# 3) 스크립트 설치
+mkdir -p ~/bin && curl -fsSL https://raw.githubusercontent.com/sangmin082/reverse_janggi/main/scripts/ios-secrets.sh -o ~/bin/ios-secrets && chmod +x ~/bin/ios-secrets
+# 4) 값 입력 (화면에 보이지 않음, .p8은 붙여넣기)
+~/bin/ios-secrets setup
+```
+
+새 앱마다:
+
+```bash
+~/bin/ios-secrets reverse_새앱 --run   # 시크릿 5개 등록 + TestFlight 실행
+```
+
+`--run`은 워크플로 파일이 그 저장소의 main에 있어야 동작합니다. 저장된 값 확인은 `ios-secrets list`.
