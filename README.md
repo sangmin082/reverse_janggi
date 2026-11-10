@@ -43,8 +43,9 @@ server/      온라인 대전 릴레이 서버 (Node, Render 배포)
 - 규칙 밸런스 자가대국: `SELFPLAY_GAMES=30 swift test -c release -Xswiftc -enable-testing --filter SelfPlay`
 - 서버 테스트: `cd server && npm install && npm test`
 
-CI (GitHub Actions):
+CI (GitHub Actions) — 자세한 내용은 [docs/RELEASE.md](./docs/RELEASE.md):
 
 - `.github/workflows/ios.yml` — push/PR 시 엔진 테스트 + 서명 없이 컴파일 검증
-- `.github/workflows/testflight.yml` — main 푸시 또는 수동 실행 시 서명 후 TestFlight 업로드
-  (fastlane match, 리버스 체스와 같은 시크릿 7개를 이 저장소에도 등록해야 함)
+- `.github/workflows/testflight.yml` — Actions 탭에서 Run workflow 또는 `v*` 태그 푸시 시 TestFlight 업로드.
+  번들 ID 등록·빌드 번호는 `scripts/asc.py`가 자동 처리, 서명은 리버스 오목과 같은 match 저장소(`ios-certificates`) 사용.
+  필요한 시크릿 5개: `ASC_KEY_ID` `ASC_ISSUER_ID` `ASC_KEY_P8` `MATCH_PASSWORD` `MATCH_GIT_BASIC_AUTHORIZATION`

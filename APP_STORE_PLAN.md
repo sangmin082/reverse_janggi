@@ -16,19 +16,15 @@
 
 ## 사람이 직접 해야 하는 작업
 
-1. **GitHub Secrets 등록** — 이 저장소 Settings → Secrets and variables → Actions에
-   리버스 체스와 같은 7개를 등록:
-   `APP_STORE_CONNECT_KEY_ID` `APP_STORE_CONNECT_ISSUER_ID` `APP_STORE_CONNECT_KEY`
-   `APPLE_TEAM_ID` `MATCH_GIT_URL` `MATCH_GIT_BASIC_AUTHORIZATION` `MATCH_PASSWORD`
-2. **App Store Connect에서 앱 레코드 생성** (API로는 불가)
-   - 나의 앱 → + → 신규 앱 → 이름 "리버스 장기", 기본 언어 한국어,
-     Bundle ID `com.reversejanggi.game`, SKU 자유
-   - Bundle ID가 목록에 없으면 TestFlight 워크플로를 한 번 수동 실행하면 fastlane이 등록해 줌
-     (또는 developer.apple.com → Identifiers에서 직접 등록)
+1. **GitHub Secrets 등록** — 리버스 오목과 같은 5개를 이 저장소에 등록 (값도 동일, [docs/RELEASE.md](./docs/RELEASE.md)):
+   `ASC_KEY_ID` `ASC_ISSUER_ID` `ASC_KEY_P8` `MATCH_PASSWORD` `MATCH_GIT_BASIC_AUTHORIZATION`
+2. **Actions → TestFlight → Run workflow** — 첫 실행은 번들 ID를 자동 등록한 뒤
+   "App Store Connect에 앱을 만들어 주세요"라며 멈춘다. 실행 요약(Summary)에 나온 이름·번들 ID·SKU로
+   App Store Connect에서 앱을 만들고(API로는 불가) 다시 Run workflow → 업로드
 3. **릴레이 서버 배포** — render.com → New → Blueprint → 이 저장소 연결 (`render.yaml` 자동 인식, free)
    - 주소가 `wss://reverse-janggi-server.onrender.com` 인지 확인 (다르면 `OnlineConfig.swift` 수정)
    - `https://reverse-janggi-server.onrender.com/privacy` → 개인정보처리방침 URL로 사용
-4. **main에 머지** → TestFlight 워크플로가 빌드·업로드 → 실기기 QA
+4. **실기기 QA** — TestFlight 앱에서 설치
 5. **심사 제출 메타데이터**
    - 부제목 예: "져야 이기는 장기"
    - 키워드: 장기, 리버스, 안티장기, 보드게임, 전략, 퍼즐, janggi
