@@ -8,7 +8,6 @@ App Store Connect → 리버스 장기 → **1.0 제출 준비 중** 화면의 �
 |---|---|
 | Render에 서버 배포 (render.com → New → Blueprint → `reverse_janggi` 저장소) | 온라인 대전과 지원·개인정보 URL이 이 서버에 있습니다. 배포 전에는 404 |
 | 배포 후 `https://reverse-janggi-server.onrender.com/` 과 `/privacy` 가 열리는지 확인 | 주소가 다르면 아래 URL과 `ReverseJanggi/Online/OnlineConfig.swift`를 같이 수정 |
-| Actions → **UI tests** 실행 결과의 `screenshots` 아티팩트 내려받기 | 6.9" 스크린샷 |
 
 ## 1. 앱 정보 (앱 정보 탭)
 
@@ -113,15 +112,17 @@ No ads · No sign-in · No data collected
 
 ### 스크린샷 (6.9" 필수, iPhone 전용 앱이라 iPad 불필요)
 
-UI tests 워크플로의 `screenshots` 아티팩트에서 골라 이 순서로 올리기 (3~6장 권장):
+이미 골라서 저장소에 넣어 두었습니다 (iPhone 17 Pro Max 시뮬레이터, 1320×2868). 이 순서대로 올리면 됩니다.
 
-1. `01 홈`
-2. `05 강제 캡처` (없으면 `03 대국 시작`)
-3. `04 대국 중반`
-4. `09 미션: 잡을 수 있으면 잡아야 해요`
-5. `02 규칙`
+| 순서 | 한국어 (`docs/screenshots/ko/`) | 영어 (`docs/screenshots/en/`) |
+|---|---|---|
+| 1 | `1-home.png` 홈 | `1-home.png` |
+| 2 | `2-forced-capture.png` 강제 캡처 표시 | `2-game.png` |
+| 3 | `3-game.png` 갈 수 있는 자리 표시 | |
+| 4 | `4-tutorial.png` 튜토리얼 미션 | |
+| 5 | `5-rules.png` 규칙 한 장 | |
 
-영어 현지화를 추가했다면 `12 English home`, `13 English game`을 영어 쪽에 올립니다.
+GitHub 웹에서 파일을 열고 다운로드 버튼으로 받을 수 있습니다. 화면이 바뀌면 Actions → **UI tests**를 다시 실행해 `screenshots` 아티팩트에서 새로 고르면 됩니다.
 
 ### 빌드
 
