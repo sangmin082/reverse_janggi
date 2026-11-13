@@ -51,6 +51,26 @@
         }
       }
     },
+    "갈 수 있음": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Can move here"
+          }
+        }
+      }
+    },
+    "강제 캡처": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Forced capture"
+          }
+        }
+      }
+    },
     "강제 캡처 — 잡을 수 있으면 잡아야 합니다": {
       "localizations": {
         "en": {
@@ -647,6 +667,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Lost connection to the server."
+          }
+        }
+      }
+    },
+    "선택됨": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Selected"
           }
         }
       }

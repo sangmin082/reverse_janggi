@@ -1,0 +1,63 @@
+name: UI tests
+
+# 시뮬레이터에서 앱을 실제로 눌러 보며 주요 흐름을 확인하고 스크린샷을 아티팩트로 올린다.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, 'claude/**']
+    paths:
+      - "ReverseJanggi/**"
+      - "ReverseJanggiUITests/**"
+      - "ReverseJanggi.xcodeproj/**"
+      - ".github/workflows/ui-tests.yml"
+
+concurrency:
+  group: ui-tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ui-tests:
+    runs-on: macos-26
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Pick simulator
+        # App Store 필수 스크린샷 크기(6.9")에 맞게 가장 최신 Pro Max를 고른다
+        run: |
+          udid=$(xcrun simctl list devices available -j | python3 -c '
+          import json, re, sys
+          devices = json.load(sys.stdin)["devices"]
+          phones = [d for runtime, ds in devices.items() if "iOS" in runtime for d in ds if d["name"].startswith("iPhone")]
+          def rank(d):
+              number = int((re.findall(r"\d+", d["name"]) or ["0"])[0])
+              return ("Pro Max" in d["name"], number)
+          best = max(phones, key=rank)
+          print(best["udid"])
+          print(best["name"], file=sys.stderr)
+          ')
+          echo "SIM_UDID=$udid" >> "$GITHUB_ENV"
+
+      - name: Run UI tests
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -project ReverseJanggi.xcodeproj \
+            -scheme ReverseJanggi \
+            -destination "id=$SIM_UDID" \
+            -resultBundlePath "$RUNNER_TEMP/ui.xcresult" \
+            | grep -E "Test Case|error:|failed|passed|\*\*"
+
+      - name: Export screenshots
+        if: always()
+        run: |
+          mkdir -p screenshots
+          xcrun xcresulttool export attachments --path "$RUNNER_TEMP/ui.xcresult" --output-path screenshots || true
+          ls screenshots | head -50
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: screenshots
+          path: screenshots
+          if-no-files-found: warn
