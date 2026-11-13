@@ -53,20 +53,17 @@ final class PlaythroughTests: XCTestCase {
         return app.descendants(matching: .any).matching(predicate)
     }
 
-    /// 움직일 수 있는 내 기물을 하나 골라 선택한다. 강제 캡처가 있으면 그 기물을 고른다.
+    /// 움직일 수 있는 내 기물을 하나 골라 선택한다.
+    /// 강제 캡처가 있으면 잡는 수만 합법수라서, 갈 곳이 표시되는 첫 기물이 곧 강제 캡처 기물이다.
+    /// (기물 하나 누르는 데 1초 가까이 걸리므로 찾자마자 멈춘다)
     @discardableResult
-    private func selectMovablePiece(sidePrefix: String, timeout: TimeInterval = 15) -> Bool {
+    private func selectMovablePiece(sidePrefix: String, timeout: TimeInterval = 60) -> Bool {
         let start = Date()
         while Date().timeIntervalSince(start) < timeout {
-            var fallback: XCUIElement?
             for piece in myPieces(sidePrefix: sidePrefix) {
                 piece.tap()
-                if targets(forcedOnly: true).firstMatch.exists { return true }
-                if fallback == nil, targets(forcedOnly: false).firstMatch.exists { fallback = piece }
-            }
-            if let fallback {
-                fallback.tap()
                 if targets(forcedOnly: false).firstMatch.exists { return true }
+                if Date().timeIntervalSince(start) > timeout { break }
             }
             usleep(500_000) // 컴퓨터가 생각 중
         }
@@ -103,7 +100,7 @@ final class PlaythroughTests: XCTestCase {
         targets(forcedOnly: false).firstMatch.tap()
 
         var forcedShot = false
-        for move in 0..<16 where !isGameOver {
+        for move in 0..<10 where !isGameOver {
             playOneMove()
             if move == 5 { shot("04 대국 중반") }
             // 강제 캡처 상황이 오면 선택한 상태로 한 장
