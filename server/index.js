@@ -20,6 +20,7 @@ const { WebSocketServer } = require('ws');
 
 const PORT = process.env.PORT || 8080;
 const PRIVACY_HTML = fs.readFileSync(path.join(__dirname, 'privacy.html'), 'utf8');
+const SUPPORT_HTML = fs.readFileSync(path.join(__dirname, 'support.html'), 'utf8');
 // 헷갈리기 쉬운 문자(0/O, 1/I)를 뺀 코드 알파벳
 const CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 const CODE_LENGTH = 6;
@@ -57,8 +58,9 @@ const httpServer = http.createServer((req, res) => {
     res.end('User-agent: *\nAllow: /\n');
     return;
   }
-  res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
-  res.end('리버스 장기 릴레이 서버 동작 중\n');
+  // 그 밖의 주소는 App Store "지원 URL"로 쓰는 안내 페이지 (헬스체크도 200을 받는다)
+  res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+  res.end(SUPPORT_HTML);
 });
 const wss = new WebSocketServer({ server: httpServer });
 

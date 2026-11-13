@@ -85,7 +85,17 @@ struct BoardView: View {
         .onTapGesture { onTap(sq) }
         .accessibilityElement()
         .accessibilityLabel(piece.map { "\($0.side.localizedName) \($0.kind.localizedName)" } ?? "")
+        .accessibilityValue(accessibilityState(of: sq))
+        .accessibilityIdentifier("pt-\(sq)")
         .accessibilityAddTraits(.isButton)
+    }
+
+    /// VoiceOver·UI 테스트용 상태: 선택됨 / 갈 수 있음 / 강제 캡처
+    private func accessibilityState(of sq: Square) -> String {
+        if forcedTargets.contains(sq) { return String(localized: "강제 캡처") }
+        if targets.contains(sq) { return String(localized: "갈 수 있음") }
+        if selected == sq { return String(localized: "선택됨") }
+        return ""
     }
 }
 
